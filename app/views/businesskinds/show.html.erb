@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @businesskind.customer %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @businesskind.category %>
+</p>
+
+<p>
+  <strong>Gross:</strong>
+  <%= @businesskind.gross %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @businesskind.income %>
+</p>
+
+<%= link_to 'Edit', edit_businesskind_path(@businesskind) %> |
+<%= link_to 'Back', businesskinds_path %>

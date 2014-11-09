@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  name: MyString
+  address: MyString
+  email: MyString
+  title: MyString
+  salary: 9.99
+  branch: 
+
+two:
+  user: 
+  name: MyString
+  address: MyString
+  email: MyString
+  title: MyString
+  salary: 9.99
+  branch: 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: 
+  category: MyString
+  gross: 9.99
+  income: 9.99
+
+two:
+  customer: 
+  category: MyString
+  gross: 9.99
+  income: 9.99

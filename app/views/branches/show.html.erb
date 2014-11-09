@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @branch.address %>
+</p>
+
+<p>
+  <strong>Manager:</strong>
+  <%= @branch.manager %>
+</p>
+
+<p>
+  <strong>Salesnumber:</strong>
+  <%= @branch.salesnumber %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @branch.region %>
+</p>
+
+<%= link_to 'Edit', edit_branch_path(@branch) %> |
+<%= link_to 'Back', branches_path %>
