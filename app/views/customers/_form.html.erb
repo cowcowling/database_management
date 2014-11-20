@@ -12,8 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
+    <fieldset>
+      <legend>User</legend>
+      <%= f.fields_for :user do |u| %>
+        <%= u.label :username, "UserName" %><br />
+        <%= u.text_field :username %><br />
+        <%= u.label :password, "Password" %><br />
+        <%= u.password_field :password %>
+      <% end %>
+    </fieldset>
   </div>
   <div class="field">
     <%= f.label :name %><br>

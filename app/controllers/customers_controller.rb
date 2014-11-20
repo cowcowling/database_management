@@ -15,6 +15,7 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
+    @customer.user = User.new
   end
 
   # GET /customers/1/edit
@@ -69,6 +70,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:user, :name, :address, :kind)
+      params.require(:customer).permit(:name, :address, :kind, user_attributes: [ :username, :password ])
     end
 end
