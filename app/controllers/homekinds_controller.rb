@@ -69,6 +69,6 @@ class HomekindsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def homekind_params
-      params.require(:homekind).permit(:customer, :marriage, :gender, :age, :income)
+      params.require(:homekind).permit(:marriage, :gender, :age, :income)
     end
 end
