@@ -26,3 +26,16 @@ customer_kinds = %w(home, bussiness)
 		)
 end
 
+100.times do
+	Businesskind.create(
+		customer: Customer.create(
+			user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
+			name: Name.name, 
+			address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip,
+			kind: "business"),
+		category: ['Sport', 'Apperal', 'Electronic'].sample,
+		gross: rand(1000000),
+		income:  rand(1000000)
+	)
+end
+
