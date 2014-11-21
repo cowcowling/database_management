@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :employees
 
   resources :customers
-
-  resources :users
 
   resources :transactions
 
