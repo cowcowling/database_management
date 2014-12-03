@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @region_manager.employee %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @region_manager.region %>
+</p>
+
+<%= link_to 'Edit', edit_region_manager_path(@region_manager) %> |
+<%= link_to 'Back', region_managers_path %>

@@ -1,0 +1,2 @@
+module RegionManagersHelper
+end

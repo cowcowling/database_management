@@ -16,8 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
+    <%= f.label :stock_amount %><br>
+    <%= f.number_field :stock_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :sale_amount %><br>
+    <%= f.number_field :sale_amount %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
@@ -26,6 +30,22 @@
   <div class="field">
     <%= f.label :kind %><br>
     <%= f.text_field :kind %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_rate %><br>
+    <%= f.text_field :discount_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_price %><br>
+    <%= f.text_field :discount_price %>
   </div>
   <div class="actions">
     <%= f.submit %>

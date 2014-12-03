@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @home_kind.customer %>
+</p>
+
+<p>
+  <strong>Marriage:</strong>
+  <%= @home_kind.marriage %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @home_kind.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @home_kind.age %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @home_kind.income %>
+</p>
+
+<%= link_to 'Edit', edit_home_kind_path(@home_kind) %> |
+<%= link_to 'Back', home_kinds_path %>

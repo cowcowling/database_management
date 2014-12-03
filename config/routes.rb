@@ -1,23 +1,34 @@
 Rails.application.routes.draw do
-  resources :users
-
-  resources :employees
-
-  resources :customers
+  resources :admins
 
   resources :transactions
+
+  resources :region_managers
+
+  resources :store_managers
+
+  resources :sales_people
 
   resources :branches
 
   resources :regions
 
-  resources :orders
+  resources :employees
 
-  resources :businesskinds
+  resources :business_kinds
 
-  resources :homekinds
+  resources :home_kinds
 
   resources :products
+
+  resources :customers
+
+  resources :orders
+
+  resources :sessions
+
+  resources :home
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

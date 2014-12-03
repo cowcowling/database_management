@@ -1,0 +1,27 @@
+<h1>Listing region_managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @region_managers.each do |region_manager| %>
+      <tr>
+        <td><%= region_manager.employee %></td>
+        <td><%= region_manager.region %></td>
+        <td><%= link_to 'Show', region_manager %></td>
+        <td><%= link_to 'Edit', edit_region_manager_path(region_manager) %></td>
+        <td><%= link_to 'Destroy', region_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Region manager', new_region_manager_path %>

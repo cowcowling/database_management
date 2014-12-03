@@ -1,0 +1,27 @@
+<h1>Listing sales_people</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Branch</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales_people.each do |sales_person| %>
+      <tr>
+        <td><%= sales_person.employee %></td>
+        <td><%= sales_person.branch %></td>
+        <td><%= link_to 'Show', sales_person %></td>
+        <td><%= link_to 'Edit', edit_sales_person_path(sales_person) %></td>
+        <td><%= link_to 'Destroy', sales_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sales person', new_sales_person_path %>

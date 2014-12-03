@@ -1,0 +1,2 @@
+module HomeKindsHelper
+end

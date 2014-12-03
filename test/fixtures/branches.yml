@@ -2,12 +2,12 @@
 
 one:
   address: MyString
-  manager: MyString
-  salesnumber: 1
-  region: 
+  store_manager_id: 
+  sales_number: 1
+  region_id: 
 
 two:
   address: MyString
-  manager: MyString
-  salesnumber: 1
-  region: 
+  store_manager_id: 
+  sales_number: 1
+  region_id: 

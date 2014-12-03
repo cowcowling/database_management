@@ -12,30 +12,58 @@ include Faker
 usertypes = %w(admin, customer, employee)
 customer_kinds = %w(home, bussiness)
 
-100.times do
-	Homekind.create(
-		customer: Customer.create(
-			user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
-			name: Name.name, 
-			address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip, 
-			kind: "home"),
-		marriage: [true, false].sample,
-		gender: ["male", "female"].sample,
-		age: rand(100),
-		income: rand(1..1000) * 1000
-		)
+9.times do
+	p = Commerce.price
+	r = rand(1..100).to_f / 100
+ 	Product.create(
+ 		name: Commerce.product_name,
+ 		stock_amount: rand(1000),
+ 		sale_amount: rand(1000),
+ 		price: p,
+ 		kind: ["TV", "cell", "tablet", "computer"].sample,
+ 		description: Lorem.sentence,
+ 		discount_rate: r,
+ 		discount_price: p * r
+ 		)
+ 	
+		# customer: Customer.create(
+		# 	user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
+		# 	name: Name.name, 
+		# 	address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip, 
+		# 	kind: "home"),
+		# marriage: [true, false].sample,
+		# gender: ["male", "female"].sample,
+		# age: rand(100),
+		# income: rand(1..1000) * 1000
+		# )
 end
 
-100.times do
-	Businesskind.create(
-		customer: Customer.create(
-			user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
-			name: Name.name, 
-			address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip,
-			kind: "business"),
-		category: ['Sport', 'Apperal', 'Electronic'].sample,
-		gross: rand(1000000),
-		income:  rand(1000000)
-	)
-end
+# 100.times do
+# 	Homekind.create(
+# 		customer: Customer.create(
+# 			user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
+# 			name: Name.name, 
+# 			address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip, 
+# 			kind: "home"),
+# 		marriage: [true, false].sample,
+# 		gender: ["male", "female"].sample,
+# 		age: rand(100),
+# 		income: rand(1..1000) * 1000
+# 		)
+# end
+
+# 100.times do
+# 	Businesskind.create(
+# 		customer: Customer.create(
+# 			user: User.create(username: Internet.user_name, password: Internet.password, usertype: "customer"), 
+# 			name: Name.name, 
+# 			address: Address.street_address + " " + Address.city + " " + Address.state_abbr + " " + Address.zip,
+# 			kind: "business"),
+# 		category: ['Sport', 'Apperal', 'Electronic'].sample,
+# 		gross: rand(1000000),
+# 		income:  rand(1000000)
+# 	)
+# end
+
+
 

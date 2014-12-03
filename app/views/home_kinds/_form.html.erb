@@ -1,0 +1,37 @@
+<%= form_for(@home_kind) do |f| %>
+  <% if @home_kind.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home_kind.errors.count, "error") %> prohibited this home_kind from being saved:</h2>
+
+      <ul>
+      <% @home_kind.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.text_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :marriage %><br>
+    <%= f.check_box :marriage %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :income %><br>
+    <%= f.text_field :income %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

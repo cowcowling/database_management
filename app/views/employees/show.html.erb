@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @employee.user %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @employee.name %>
 </p>
@@ -21,18 +16,8 @@
 </p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @employee.title %>
-</p>
-
-<p>
   <strong>Salary:</strong>
   <%= @employee.salary %>
-</p>
-
-<p>
-  <strong>Branch:</strong>
-  <%= @employee.branch %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |

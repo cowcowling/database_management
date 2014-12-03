@@ -1,0 +1,33 @@
+<%= form_for(@business_kind) do |f| %>
+  <% if @business_kind.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business_kind.errors.count, "error") %> prohibited this business_kind from being saved:</h2>
+
+      <ul>
+      <% @business_kind.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.text_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :gross %><br>
+    <%= f.text_field :gross %>
+  </div>
+  <div class="field">
+    <%= f.label :income %><br>
+    <%= f.text_field :income %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

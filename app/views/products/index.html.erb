@@ -4,9 +4,14 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Amount</th>
+      <th>Stock amount</th>
+      <th>Sale amount</th>
       <th>Price</th>
       <th>Kind</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Discount rate</th>
+      <th>Discount price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +20,14 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.amount %></td>
+        <td><%= product.stock_amount %></td>
+        <td><%= product.sale_amount %></td>
         <td><%= product.price %></td>
         <td><%= product.kind %></td>
+        <td><%= product.image %></td>
+        <td><%= product.description %></td>
+        <td><%= product.discount_rate %></td>
+        <td><%= product.discount_price %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
