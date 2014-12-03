@@ -1,0 +1,70 @@
+<div class="wrap">
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="<%= asset_path "logo.png" %>" alt=""> </a>
+	</div>
+	<div class="header-right">
+	<div class="contact-info">
+		<ul>
+			<li>Call to Order</li>
+			<li>(+1) 412-456-7890</li>
+		</ul>
+	</div>
+	 </div>
+    <div class="clear"></div>
+</div>
+<div class="hdr-btm">
+<div class="hdr-btm-left">
+	<div class="search">
+	  <form>
+              <input type="text" name="keyword" placeholder="type in the keywords..."/>
+              <input type="submit" value="Search" name="search" />
+	  </form>
+	</div>
+	<div class="txt-right">
+            <h3><a href="adsearch.html">Advanced Search</a></h3>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>
+<div class="main">
+<div class="sidebar">
+<div class="s-main">
+	<div class="s_hdr">
+		<h2>Categories</h2>
+	</div>
+	<div class="text1-nav">
+		<ul>
+			<li><%= link_to "Cell Phone", home_index_path("cell") %></li>
+			<li><a href="catesearch.html">Computer</a></li>
+			<li><a href="catesearch.html">Laptop</a></li>
+			<li><a href="catesearch.html">Tablet</a></li>
+	    </ul>
+	</div>
+</div>
+</div>
+    
+<div class="content">
+	<% if @products %>
+		<table>
+			<% @products.each do |product| %>
+		      <tr>
+		      	<td><img src="<%= asset_path product.image %>" alt=""></td>
+		        <td><%= product.name %></td>
+		        <td><%= product.price %></td>
+		        <td><%= product.discount_price %></td>
+		        <td><%= product.description %></td>
+		      </tr>
+		    <% end %>
+		</table>
+	<% end %>
+</div>
+
+<div class="clear"></div>
+<div class="footer-bg">
+<div class="footer">
+	<div class="footer1">
+            <p>All Rights Reserved | Design by&nbsp;:&nbsp;Xiujun Lin, Jie Wen, Yu Zhang</p>
+	</div>
+</div>
+</div>
