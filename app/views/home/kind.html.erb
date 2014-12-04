@@ -1,7 +1,7 @@
 <div class="wrap">
 <div class="header">
 	<div class="logo">
-		<a href="index.html"><img src="<%= asset_path "logo.png" %>" alt=""> </a>
+		<a href="/home"><img src="<%= asset_path "logo.png" %>" alt=""> </a>
 	</div>
 	<div class="header-right">
 	<div class="contact-info">
@@ -35,10 +35,9 @@
 	</div>
 	<div class="text1-nav">
 		<ul>
-			<li><%= link_to "Cell Phone", home_index_path("cell") %></li>
-			<li><a href="catesearch.html">Computer</a></li>
-			<li><a href="catesearch.html">Laptop</a></li>
-			<li><a href="catesearch.html">Tablet</a></li>
+			<li><%= link_to "Cell Phone", home_index_path(Kind: "cell") %></li>
+			<li><%= link_to "Computer", home_index_path(Kind: "computer") %></li>
+			<li><%= link_to "Tablet", home_index_path(Kind: "tablet") %></li>
 	    </ul>
 	</div>
 </div>

@@ -1,0 +1,71 @@
+<div style="width:990px;margin:0 auto;">
+<table width="990" height="650" border="0" align="left" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="318" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="299" align="right"><img src="<%= asset_path 'login1_01.gif' %>" width="318" height="299" /></td>
+        </tr>
+        <tr>
+          <td height="351" align="right"><img src="<%= asset_path 'login1_04.gif' %>" width="318" height="351" /></td>
+        </tr>
+      </table>
+    </td>
+    <td width="366" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="299" background="<%= asset_path 'login_6.gif' %>"><img src="<%= asset_path 'login1_02.gif' %>" width="366" height="299" /></td>
+        </tr>
+        <tr>
+          <td height="96" valign="top" background="<%= asset_path 'login_9.gif' %>">
+            <%= form_tag sessions_path, method: :post do %>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" height="25">&nbsp;</td>
+                <td width="48%" valign="top">
+                  <label>
+                  <input name="txtName" type="text" class="txt" size="25" />
+                  </label>
+                </td>
+                <td width="27%" rowspan="2">
+                  <button><img src="<%= asset_path 'login_2.gif' %>" width="57" height="55" border="0" /></button> 
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>
+                  <input name="txtPwd" type="password" class="txt" size="25" />
+                </td>
+              </tr>
+              <tr>
+                <td height="36">&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td height="255" background="<%= asset_path 'login1_07.gif' %>">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="129">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="318" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="299" align="left" background="<%= asset_path 'login1_03.gif' %>">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="351" align="left" background="<%= asset_path 'login1_06.gif' %>">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>

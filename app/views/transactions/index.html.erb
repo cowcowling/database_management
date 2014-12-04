@@ -17,12 +17,12 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.customer %></td>
-        <td><%= transaction.product %></td>
-        <td><%= transaction.sales_person %></td>
+        <td><%= transaction.customer.name %></td>
+        <td><%= transaction.product.name %></td>
+        <td><%= transaction.sales_person.employee.name %></td>
         <td><%= transaction.quantity %></td>
         <td><%= transaction.date %></td>
-        <td><%= transaction.branch %></td>
+        <td><%= transaction.branch.address %></td>
         <td><%= transaction.paymentmethod %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>

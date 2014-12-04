@@ -60,7 +60,7 @@ body {
 .nav li:before{
 	vertical-align: middle;
 	margin:10px 4px 0;
-	content:url('../images/arrow.png');
+	content:url('/assets/arrow.png');
 }
 .nav li.active a{
 	color:#97b538;
@@ -251,7 +251,7 @@ body {
 .text1-nav ul li:before{
 	margin-top: 12px;
 	margin-right: 10px;
-	content: url('../images/arrow1.png');
+	content: url('assets/arrow1.png'));
 	float: left;
 }
 .text1-nav ul li a:hover{
@@ -274,7 +274,7 @@ body {
 .cnt-btn a{
 	font-family: 'Cabin Condensed', sans-serif;
 	display: inline-block;
-	background: url('../images/btn.png') no-repeat;
+	background: url('assets/btn.png') no-repeat;
 	border: none;
 	outline: none;
 	padding: 14px 60px;
