@@ -2,12 +2,12 @@
 
 <p>
   <strong>Employee:</strong>
-  <%= @region_manager.employee %>
+  <%= @region_manager.employee.name %>
 </p>
 
 <p>
   <strong>Region:</strong>
-  <%= @region_manager.region %>
+  <%= @region_manager.region.region_name %>
 </p>
 
 <%= link_to 'Edit', edit_region_manager_path(@region_manager) %> |

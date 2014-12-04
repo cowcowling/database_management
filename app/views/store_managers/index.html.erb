@@ -13,9 +13,9 @@
   <tbody>
     <% @store_managers.each do |store_manager| %>
       <tr>
-        <td><%= store_manager.employee %></td>
-        <td><%= store_manager.branch %></td>
-        <td><%= store_manager.region %></td>
+        <td><%= store_manager.employee.name %></td>
+        <td><%= store_manager.branch.address %></td>
+        <td><%= store_manager.region.region_name %></td>
         <td><%= link_to 'Show', store_manager %></td>
         <td><%= link_to 'Edit', edit_store_manager_path(store_manager) %></td>
         <td><%= link_to 'Destroy', store_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -2,17 +2,17 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @transaction.customer %>
+  <%= @transaction.customer.name %>
 </p>
 
 <p>
   <strong>Product:</strong>
-  <%= @transaction.product %>
+  <%= @transaction.product.name %>
 </p>
 
 <p>
   <strong>Sales person:</strong>
-  <%= @transaction.sales_person %>
+  <%= @transaction.sales_person.employee.name %>
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <strong>Branch:</strong>
-  <%= @transaction.branch %>
+  <%= @transaction.branch.address %>
 </p>
 
 <p>

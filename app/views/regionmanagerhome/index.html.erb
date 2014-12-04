@@ -1,0 +1,105 @@
+<ul class="nav nav-tabs" role="tablist" id="myTab">
+  <li role="presentation" class="active"><a href="#transaction" aria-controls="Transaction" role="tab" data-toggle="tab">Transaction</a></li>
+  <li role="presentation"><a href="#salespeople" aria-controls="SalesPeople" role="tab" data-toggle="tab">Sales People</a></li>
+  <li role="presentation"><a href="#storemanager" aria-controls="StoreManager" role="tab" data-toggle="tab">Store Managers</a></li>
+</ul>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="transaction">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Sales person</th>
+          <th>Quantity</th>
+          <th>Date</th>
+          <th>Branch</th>
+          <th>Paymentmethod</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.customer.name %></td>
+            <td><%= transaction.product.name %></td>
+            <td><%= transaction.sales_person.employee.name %></td>
+            <td><%= transaction.quantity %></td>
+            <td><%= transaction.date %></td>
+            <td><%= transaction.branch.address %></td>
+            <td><%= transaction.paymentmethod %></td>
+            <td><%= link_to 'Show', transaction %></td>
+            <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+            <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br />
+    <%= link_to 'New Transaction', new_transaction_path %>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="salespeople">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Branch</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @sales_people.each do |sales_person| %>
+          <tr>
+            <td><%= sales_person.employee.name %></td>
+            <td><%= sales_person.branch.address %></td>
+            <td><%= link_to 'Show', sales_person %></td>
+            <td><%= link_to 'Edit', edit_sales_person_path(sales_person) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Sales person', new_sales_person_path %>
+
+  </div>
+  <div role="tabpanel" class="tab-pane" id="storemanager">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Branch</th>
+          <th>Region</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @store_managers.each do |store_manager| %>
+          <tr>
+            <td><%= store_manager.employee.name %></td>
+            <td><%= store_manager.branch.address %></td>
+            <td><%= store_manager.region.region_name %></td>
+            <td><%= link_to 'Show', store_manager %></td>
+            <td><%= link_to 'Edit', edit_store_manager_path(store_manager) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Store manager', new_store_manager_path %>
+  </div>
+</div>
+
+<script>
+  $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>

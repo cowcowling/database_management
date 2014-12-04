@@ -41,3 +41,6 @@ gem 'spring',        group: :development
 # Use faker
 gem 'faker', '1.4.3'
 
+# Use Bootstrap
+gem 'bootstrap-sass', '~> 3.1.1'
+

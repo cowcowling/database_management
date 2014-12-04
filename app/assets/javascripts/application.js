@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require plugins/metisMenu/jquery.metisMenu.js
+//= require plugins/dataTables/jquery.dataTables.js
+//= require plugins/dataTables/dataTables.bootstrap.js
+//= require bootstrap
+//= require sb-admin
 //= require_tree .

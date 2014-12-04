@@ -12,8 +12,8 @@
   <tbody>
     <% @region_managers.each do |region_manager| %>
       <tr>
-        <td><%= region_manager.employee %></td>
-        <td><%= region_manager.region %></td>
+        <td><%= region_manager.employee.name %></td>
+        <td><%= region_manager.region.region_name %></td>
         <td><%= link_to 'Show', region_manager %></td>
         <td><%= link_to 'Edit', edit_region_manager_path(region_manager) %></td>
         <td><%= link_to 'Destroy', region_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
