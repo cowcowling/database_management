@@ -25,6 +25,16 @@ class TransactionsController < ApplicationController
   # POST /transactions.json
   def create
     @transaction = Transaction.new(transaction_params)
+    if(Product.find(@transaction.product_id).stock_amount < @transaction.quantity)
+      @transaction.errors.add(:stock, "Out of Stock")
+      render :new
+      return
+    else
+      p = Product.find(@transaction.product_id)
+      p.stock_amount -= @transaction.quantity
+      p.sale_amount += @transaction.quantity
+      p.save
+    end
 
     respond_to do |format|
       if @transaction.save
