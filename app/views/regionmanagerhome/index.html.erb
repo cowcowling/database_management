@@ -97,6 +97,7 @@
     <%= link_to 'New Store manager', new_store_manager_path %>
   </div>
   <div role="tabpanel" class="tab-pane" id="report">
+    <h2>Store Report</h2>
     <table class="table table-striped table-bordered table-hover table-condensed">
       <thead>
         <tr>
@@ -119,6 +120,7 @@
       </tbody>
     </table>
 
+    <h2>Porduct Report</h2>
     <table id="dataTables-example" class="table table-striped table-bordered table-hover table-condensed">
       <thead>
         <tr>
@@ -128,7 +130,6 @@
           <th>Total Sales</th>
         </tr>
       </thead>
-
       <tbody>
         <% @product_reports.each do |key, value| %>
           <tr>
