@@ -13,6 +13,18 @@ class RegionmanagerhomeController < ApplicationController
 			end
 			@store_reports << {id: branch.id, address: branch.address, transaction_count: count, total_sales: total_sales}
 		end
-		puts @store_reports.inspect
+		@product_reports = {}
+		Transaction.all.each do |transaction|
+			if(@product_reports.has_key?(transaction.product_id))
+				@product_reports[transaction.product_id] += transaction.quantity
+			else
+				@product_reports[transaction.product_id] = transaction.quantity
+			end
+
+			# @product_reports << {product_id: product.id, product: product.name, sales_amount: countproduct, total_product_sales: total_product_sales}
+
+		end
+
+		puts @product_reports.inspect
 	end
 end
