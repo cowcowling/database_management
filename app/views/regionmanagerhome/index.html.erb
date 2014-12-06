@@ -126,6 +126,7 @@
         <tr>
           <th>Product ID</th>
           <th>Product Name</th>
+          <th>Product Kind</th>
           <th>Sales Amount</th>
           <th>Total Sales</th>
         </tr>
@@ -135,6 +136,7 @@
           <tr>
             <td><%= key %></td>
             <td><%= Product.find(key).name %></td>
+            <td><%= Product.find(key).kind %></td>
             <td><%= value %></td>
             <td><%= Product.find(key).price * value %></td>
           </tr>
